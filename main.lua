@@ -59,6 +59,9 @@ local function finishLoading()
 					loadstring(game:HttpGet('https://raw.githubusercontent.com/osdate/Neverlose/'..readfile('newvape/profiles/commit.txt')..'/loader.lua', true), 'loader')()
 				end
 			]]
+			if Key then
+				teleportScript = 'Key = \''.. Key.. '\'\n'.. teleportScript
+			end
 			if shared.VapeDeveloper then
 				teleportScript = 'shared.VapeDeveloper = true\n'..teleportScript
 			end
