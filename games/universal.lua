@@ -54,7 +54,9 @@ local isnetworkowner = identifyexecutor and table.find({'AWP', 'Nihon'}, ({ident
 end
 local gameCamera = workspace.CurrentCamera or workspace:FindFirstChildWhichIsA('Camera')
 local lplr = playersService.LocalPlayer
-local assetfunction = getcustomasset
+local assetfunction = function(asset)
+	return downloadFile(asset, getcustomasset)
+end
 
 local vape = shared.vape
 local tween = vape.Libraries.tween
